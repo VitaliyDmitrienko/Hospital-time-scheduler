@@ -8,10 +8,10 @@ import java.time.LocalDateTime;
 @Entity
 @Getter
 @Setter
-@EqualsAndHashCode
-@NoArgsConstructor
-@Builder
-@AllArgsConstructor
+//@EqualsAndHashCode
+//@NoArgsConstructor
+//@Builder
+//@AllArgsConstructor
 @Table(name = "bookingappointment")
 public class BookingAppointment {
     @Id
@@ -28,7 +28,7 @@ public class BookingAppointment {
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "timeslot")
-    private LocalDateTime operationDate;
+    private LocalDateTime timeSlot;
 
 
 

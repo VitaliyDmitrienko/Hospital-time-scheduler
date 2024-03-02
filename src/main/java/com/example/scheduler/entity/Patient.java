@@ -10,21 +10,22 @@ import java.util.UUID;
 @Entity
 @Getter
 @Setter
-@EqualsAndHashCode
-@NoArgsConstructor
-@Builder
-@AllArgsConstructor
+//@EqualsAndHashCode
+//@NoArgsConstructor
+//@Builder
+//@AllArgsConstructor
 @Table(name = "patient")
 public class Patient {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    private Long id;
 
 //    @GeneratedValue(generator = "uuid2")
 //    @GenericGenerator(name = "uuid2", strategy = "org.hibernate.id.UUIDGenerator")
-    @Column(name = "uuid")
+//    @Column(name = "uuid")
 //    @Column(name = "uuid", columnDefinition = "VARCHAR(255)")
-    private UUID uuid;
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private UUID id;
 
     @Column(name = "family")
     private String family;

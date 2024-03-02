@@ -18,15 +18,15 @@ import java.util.UUID;
 public class Doctor {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    private Long id;
 
 //    @GeneratedValue(generator = "uuid2")
-//    @GeneratedValue(strategy = GenerationType.UUID)
+    @GeneratedValue(strategy = GenerationType.UUID)
 //    @GenericGenerator(name = "uuid2", strategy = "org.hibernate.id.UUIDGenerator")
-    @Column(name = "uuid", columnDefinition = "serial")
+//    @Column(name = "uuid", columnDefinition = "serial")
 //    @Column(name = "uuid", columnDefinition = "VARCHAR(255)")
-    private UUID uuid;
+    private UUID id;
 
     @Column(name = "family")
     private String family;
