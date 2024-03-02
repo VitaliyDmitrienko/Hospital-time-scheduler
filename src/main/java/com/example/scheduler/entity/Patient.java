@@ -1,4 +1,4 @@
-package com.example.sheduler.entity;
+package com.example.scheduler.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -20,7 +20,7 @@ public class Patient {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @GeneratedValue(generator = "uuid2")
+//    @GeneratedValue(generator = "uuid2")
 //    @GenericGenerator(name = "uuid2", strategy = "org.hibernate.id.UUIDGenerator")
     @Column(name = "uuid")
 //    @Column(name = "uuid", columnDefinition = "VARCHAR(255)")

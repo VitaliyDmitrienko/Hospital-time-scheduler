@@ -1,6 +1,6 @@
-package com.example.sheduler.repository;
+package com.example.scheduler.repository;
 
-import com.example.sheduler.entity.Patient;
+import com.example.scheduler.entity.Patient;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

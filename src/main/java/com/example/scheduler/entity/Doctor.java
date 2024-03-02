@@ -1,8 +1,7 @@
-package com.example.sheduler.entity;
+package com.example.scheduler.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-import org.hibernate.annotations.GenericGenerator;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,9 +21,10 @@ public class Doctor {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @GeneratedValue(generator = "uuid2")
+//    @GeneratedValue(generator = "uuid2")
+//    @GeneratedValue(strategy = GenerationType.UUID)
 //    @GenericGenerator(name = "uuid2", strategy = "org.hibernate.id.UUIDGenerator")
-    @Column(name = "uuid")
+    @Column(name = "uuid", columnDefinition = "serial")
 //    @Column(name = "uuid", columnDefinition = "VARCHAR(255)")
     private UUID uuid;
 
