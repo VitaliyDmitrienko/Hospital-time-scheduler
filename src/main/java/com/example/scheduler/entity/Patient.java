@@ -11,7 +11,7 @@ import java.util.UUID;
 @Getter
 @Setter
 //@EqualsAndHashCode
-//@NoArgsConstructor
+@NoArgsConstructor
 //@Builder
 //@AllArgsConstructor
 @Table(name = "patient")

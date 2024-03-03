@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 //@EqualsAndHashCode
-//@NoArgsConstructor
+@NoArgsConstructor
 //@Builder
 //@AllArgsConstructor
 @Table(name = "bookingappointment")
