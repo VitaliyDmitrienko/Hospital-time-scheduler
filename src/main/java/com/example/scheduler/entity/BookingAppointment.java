@@ -18,17 +18,22 @@ public class BookingAppointment {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+//    @ManyToOne
+//    @JoinColumn(name = "doctorid", nullable = false)
+//    private Doctor doctorID;
+
     @ManyToOne
-    @JoinColumn(name = "doctorid", nullable = false)
-    private Doctor doctorID;
+    @JoinColumn(name = "timeslotid", nullable = false)
+    private TimeSlot timeslotID;
+
 
     @ManyToOne
     @JoinColumn(name = "patientid", nullable = false)
     private Patient patientID;
 
-    @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "timeslot")
-    private LocalDateTime timeSlot;
+//    @Temporal(TemporalType.TIMESTAMP)
+//    @Column(name = "timeslot")
+//    private LocalDateTime timeSlot;
 
 
 

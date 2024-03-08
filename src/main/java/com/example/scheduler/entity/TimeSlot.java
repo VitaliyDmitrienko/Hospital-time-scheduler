@@ -28,7 +28,7 @@ public class TimeSlot {
     @Temporal(TemporalType.TIMESTAMP)
     private LocalDateTime durationTimeSlot;
 
-    @ManyToOne
-    @JoinColumn(name = "patientid", nullable = false)
-    private Patient patientID;
+//    @ManyToOne
+//    @JoinColumn(name = "patientid", nullable = false)
+//    private Patient patientID;
 }

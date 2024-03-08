@@ -3,6 +3,7 @@ package com.example.scheduler.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -28,6 +29,9 @@ public class Patient {
 
     @Column(name = "secondname")
     private String secondName;
+
+    @Column(name = "birthdate")
+    private LocalDateTime patientBirthDate;
 
     @OneToMany(mappedBy="patientID")
     private List<BookingAppointment> bookingAppointmentList = new ArrayList<>();
