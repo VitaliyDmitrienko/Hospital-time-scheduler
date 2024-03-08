@@ -13,14 +13,21 @@ import java.time.LocalDateTime;
 @Setter
 @NoArgsConstructor
 public class TimeSlot {
-    @Transient
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Temporal(TemporalType.TIMESTAMP)
-    private LocalDateTime startSlot;
+    @ManyToOne
+    @JoinColumn(name = "doctorid", nullable = false)
+    private Doctor doctorID;
 
     @Temporal(TemporalType.TIMESTAMP)
-    private LocalDateTime durationSlot;
+    private LocalDateTime startTimeSlot;
+
+    @Temporal(TemporalType.TIMESTAMP)
+    private LocalDateTime durationTimeSlot;
+
+    @ManyToOne
+    @JoinColumn(name = "patientid", nullable = false)
+    private Patient patientID;
 }

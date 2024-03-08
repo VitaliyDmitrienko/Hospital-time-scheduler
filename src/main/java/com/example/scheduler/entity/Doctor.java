@@ -41,5 +41,5 @@ public class Doctor {
     private List<BookingAppointment> bookingAppointmentList = new ArrayList<>();
 
     @OneToMany(mappedBy = "doctorID")
-    private List<TimeSheet> timeSheetList = new ArrayList<>();
+    private List<TimeSlot> timeSlotList = new ArrayList<>();
 }
