@@ -12,30 +12,21 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 //@Builder
 //@AllArgsConstructor
-@Table(name = "bookingappointment")
+@Table(name = "bookingappointment",
+        uniqueConstraints = { @UniqueConstraint(columnNames = { "timeslotid", "patientid" }) })
 public class BookingAppointment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-//    @ManyToOne
-//    @JoinColumn(name = "doctorid", nullable = false)
-//    private Doctor doctorID;
-
-    @ManyToOne
-    @JoinColumn(name = "timeslotid", nullable = false)
+    @ManyToOne(fetch = FetchType.LAZY)
+//    @Column(unique=true)
+    @JoinColumn(name = "timeslotid", referencedColumnName = "id", nullable = false)
     private TimeSlot timeslotID;
 
 
-    @ManyToOne
-    @JoinColumn(name = "patientid", nullable = false)
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "patientid", referencedColumnName = "id", nullable = false)
     private Patient patientID;
-
-//    @Temporal(TemporalType.TIMESTAMP)
-//    @Column(name = "timeslot")
-//    private LocalDateTime timeSlot;
-
-
-
 
 }
