@@ -4,8 +4,6 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.springframework.data.annotation.Transient;
-
 import java.time.LocalDateTime;
 
 @Entity
@@ -23,10 +21,10 @@ public class TimeSlot {
     private Doctor doctorID;
 
     @Temporal(TemporalType.TIMESTAMP)
-    private LocalDateTime startTimeSlot;
+    private LocalDateTime starttimeslot;
 
     @Temporal(TemporalType.TIMESTAMP)
-    private LocalDateTime durationTimeSlot;
+    private LocalDateTime durationtimeslot;
 
 //    @ManyToOne
 //    @JoinColumn(name = "patientid", nullable = false)

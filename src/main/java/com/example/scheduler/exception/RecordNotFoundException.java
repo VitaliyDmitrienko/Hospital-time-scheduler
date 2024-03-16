@@ -1,9 +1,9 @@
 package com.example.scheduler.exception;
 
-public class UserNotFoundException extends RuntimeException {
+public class RecordNotFoundException extends RuntimeException {
 
     //        private static final long serialVersionUID = 1L;
-    public UserNotFoundException(String msg) {
+    public RecordNotFoundException(String msg) {
         super(msg);
     }
 }
