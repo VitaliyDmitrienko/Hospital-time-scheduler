@@ -30,9 +30,11 @@ public class Doctor {
     @Column(name = "secondname")
     private String secondName;
 
+//    @OneToMany
 //    @OneToMany(mappedBy="doctorID")
 //    private List<BookingAppointment> bookingAppointmentList = new ArrayList<>();
 
+//    @OneToMany
     @OneToMany(mappedBy = "doctorID")
     private List<TimeSlot> timeSlotList = new ArrayList<>();
 }

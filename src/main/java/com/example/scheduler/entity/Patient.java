@@ -34,6 +34,7 @@ public class Patient {
     @Column(name = "birthdate")
     private LocalDate patientBirthDate;
 
-    @OneToMany(fetch = FetchType.LAZY,mappedBy="patientID")
+    @OneToMany(fetch = FetchType.LAZY)
+//    @OneToMany(fetch = FetchType.LAZY,mappedBy="patientID")
     private List<BookingAppointment> bookingAppointmentList = new ArrayList<>();
 }
